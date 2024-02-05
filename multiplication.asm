@@ -1,13 +1,12 @@
-lda 0870h
-mov b,a
-lda 0871h
-mov c,a
-mvi d,0
-loop:mov a,d
-add b
-mov d,a
+lxi h,0000h
+mov b,m
+lxi h, 0001h
+mov c,m
+mvi a,00h
+
+loop: add b
 dcr c
 jnz loop
-mov d,a
-sta 0872h
+
+sta 0002
 hlt
